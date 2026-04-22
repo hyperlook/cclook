@@ -1,0 +1,16 @@
+{
+  "name": "cclook",
+  "version": "0.1.1",
+  "description": "Claude Code 单行状态栏",
+  "bin": {
+    "cclook": "bin/statusline.js"
+  },
+  "type": "commonjs",
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "bin"
+  ],
+  "license": "MIT"
+}
