@@ -1,6 +1,6 @@
 {
   "name": "cclook",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Claude Code 单行状态栏",
   "bin": {
     "cclook": "bin/statusline.js"

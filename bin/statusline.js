@@ -88,7 +88,11 @@ function main() {
   const fmtRemaining5h = (resetAt) => {
     if (resetAt == null) return null;
     const ms = resetAt * 1000 - Date.now();
-    if (ms <= 0) return '0m';
+    if (ms <= 0) return '0s';
+    if (ms < 60000) {
+      const s = Math.floor(ms / 1000);
+      return `${s}s`;
+    }
     const totalMin = Math.floor(ms / 60000);
     const h = Math.floor(totalMin / 60);
     const m = totalMin % 60;
@@ -98,7 +102,11 @@ function main() {
   const fmtRemaining7d = (resetAt) => {
     if (resetAt == null) return null;
     const ms = resetAt * 1000 - Date.now();
-    if (ms <= 0) return '0h';
+    if (ms <= 0) return '0m';
+    if (ms < 3600000) {
+      const m = Math.floor(ms / 60000);
+      return `${m}m`;
+    }
     const totalH = Math.floor(ms / 3600000);
     const d = Math.floor(totalH / 24);
     const h = totalH % 24;
